@@ -1,5 +1,7 @@
 .first__navbar {
   background-color: rgb(254, 238, 0);
+  padding-right: 15px !important;
+  padding-left: 15px !important;
 
   ul {
     width: 100%;
@@ -36,7 +38,7 @@
     }
   }
 }
-.aside__controller{
+.aside__controller {
   position: absolute;
   top: 70px;
   right: 4px;
