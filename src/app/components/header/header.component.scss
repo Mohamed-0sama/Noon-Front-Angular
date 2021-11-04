@@ -1,6 +1,18 @@
+//////// sorted as following :-
+// first__navbar
+// aside__controller
+// second__nav
+// show__categories
+// @media (max-width: 768px)
+// @media (max-width: 575px)
+// DropDown ==> categories
+*{
+  color: #404553 !important;
+  font-size: 14px;
+  text-decoration: none !important;
+}
 body{
   font-family: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif ;
-  background-color: #eee
 }
 header {
   font-size: 0.9rem;
@@ -63,8 +75,9 @@ header {
   }
   .show__categories {
     padding: 20px;
-    // display: none;
+    display: none;
     position: absolute;
+    // top: 38px;
     top: 38px;
     width: 100%;
     background-color: #fff;
@@ -171,5 +184,85 @@ header {
       height: calc(100vh - 60px);
     }
   }
+// dropDown css ////////////////////////////////////////////////////////////////
+}
+.dropdown{
+  width: 227px;
+  border-right: 1px solid #eee;
+  position: relative;
+  // min-height: 200px;
+  .a_cat{
+    padding-left:  20px;
+    letter-spacing: 1.3px;
+  }
+  .dropdown-toggle::after {
+    margin-left: 2.3em;
+    vertical-align: 0;
+    font-size: 20px;
+  }
+  .dropdown-menu{
+    background-color: transparent;
+    padding: 15px 10px;
+    li{
+      padding: 8px 15px;
+     cursor: pointer;
+     a{
+      font-weight: 400;
+      padding: 0;
+     }
+    }
+  }
+  .dropdownDiv{
+    display:none;
+    position: absolute;
+    // min-width: 500px;
+    min-height: 440px;
+    background-color: #FCFBF4;
+    // background-color: #554646;
+    .dropdownDivOne{
+      width: 226px;
+      // background-color: #FCFBF4;
+      position: relative;
+      height:100%;
+      z-index: 3;
+    }
+    .dropdownDivTwo{
+      padding: 15px;
+      min-width: 500px;
+      background-color: #fff;
+      flex: 1;
+      h4{
+        font-weight: 700;
+        font-size:17px
+      }
 
+      a{
+        font-weight: 500;
+        padding-top: 0;
+      }
+    }
+  }
+  .dropdownDiv::before{
+    content: "";
+    position: absolute;
+    left: 226px;
+    width: 1px;
+    height: 100%;
+    background-color: #eee
+  }
+
+}
+.dropdown:hover .dropdownDiv{
+  display: flex;
+}
+// .dropdown .dropdownDiv{   // just for test
+//   display: flex;
+// }
+.dropdown:hover>.dropdown-menu{
+  display: block;
+  margin-top: 0;
+  width: 226px;
+  border-radius: 0;
+  border:0;
+  // border-right: 1px solid #eee;
 }

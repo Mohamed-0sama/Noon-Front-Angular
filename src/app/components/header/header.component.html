@@ -81,34 +81,111 @@
     </div>
   </nav>
 
-  <i class="bi bi-filter-square-fill d-block d-md-none aside__controller"></i>
+  <i
+    class="bi bi-filter-square-fill d-block d-md-none aside__controller"
+    (click)="toggleNav()"
+  ></i>
   <!-- <i class="bi bi-filter-square-fill"></i> -->
-  <div class="second__navbar d-flex">
+  <div class="second__navbar d-flex" #second__navbar>
     <div class="dropdown d-none d-lg-block">
-      <a
-        class="btn dropdown-toggle"
-        href="#"
-        role="button"
-        id="dropdownMenuLink"
-        data-bs-toggle="dropdown"
+      <!--  data-bs-toggle="dropdown"
         aria-expanded="false"
-      >
+      role="button" -->
+      <a class="btn dropdown-toggle a_cat" id="dropdownMenuLink">
         ALL CATEGORIES
       </a>
-
+      <!-- <div></div> -->
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Electronics</a></li>
+        <li><a class="dropdown-item" href="#">Mobiles</a></li>
+        <li><a class="dropdown-item" href="#">Beauty & Health</a></li>
+        <li><a class="dropdown-item" href="#">Fashion</a></li>
+        <li><a class="dropdown-item" href="#">Home & Kitchen</a></li>
+        <li><a class="dropdown-item" href="#">Sports & Fitness</a></li>
+        <li><a class="dropdown-item" href="#">Baby Products</a></li>
+        <li><a class="dropdown-item" href="#">Books</a></li>
+        <li><a class="dropdown-item" href="#">Office Products</a></li>
+        <li><a class="dropdown-item" href="#">Music</a></li>
+        <li><a class="dropdown-item" href="#">Automotive</a></li>
       </ul>
+      <div class="dropdownDiv">
+        <div class="dropdownDivOne"></div>
+        <div class="dropdownDivTwo">
+          <h4>Electronics</h4>
+          <hr class="m-2"/>
+          <div class="d-flex">
+            <div class="w-50">
+              <h6>Most Popular</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="">
+              <h6>Top Brands</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <ul class="nav">
+    <ul class="nav" #li>
       <!-- <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Active</a>
           </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="#">Electronics</a>
+        <a class="nav-link">Electronics</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Electronics</a>
@@ -135,7 +212,7 @@
         <a class="nav-link" href="#">Deals</a>
       </li>
     </ul>
-    <div class="show__categories container-fluid">
+    <div class="show__categories container-fluid" #show__categories>
       <div class="row">
         <div class="col-2">
           <h6>CATEGORIES</h6>
