@@ -36,10 +36,12 @@
         <label for="imageinput" class="form-label">Image </label>
         <input type="file" name="image" class="form-control" id="inputImage"   (change)="upload($event)"  >
     </div>
-    <!-- <div class="col-md-8">
+    <!-- this for multi images uploading -->
+    <div class="col-md-8">
         <label for="imageinput" class="form-label">Multi Images</label>
         <input type='file' name='files[]' multiple class="form-control" id="inputImage"  formControlName="ImgUrL" (change)="uploadMulti($event)"  >
-    </div> -->
+    </div>
+
     <div class="col-md-2">
       <label for="inputZip" class="form-label">Product ID</label>
       <input type="number" name="ProductID" class="form-control" id="inputID" formControlName="id" required>

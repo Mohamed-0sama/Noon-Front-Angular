@@ -54,7 +54,7 @@ export class AddingProductsComponent implements OnInit {
   upload(event:any){
     const file= event.target.files[0];
     console.log(file.name);
-this.myForm.patchValue({ImgURL:file.name})
+    ({ImgURL:file.name})
       this.catAPI.uploadimage(file).subscribe((d)=>{
       console.log("New file",d);
     },error=>{console.error(error);});
