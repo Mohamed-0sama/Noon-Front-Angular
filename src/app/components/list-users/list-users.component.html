@@ -1,0 +1,36 @@
+<h3>Today Date: {{todayDate | date: 'mediumDate'}}</h3>
+<button (click)="showUserStats()">Show UserStats</button>
+<h1>total number of users : {{UserStats?.total}}</h1>
+<!-- <input type="text" #idOfProduct>
+<button (click)="showProductById(idOfProduct.value)">Show this product</button> -->
+
+<hr>
+<div>
+    <h2>Users List:</h2>
+    <table class="table table-hover table-striped table-dark">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Image</th>
+                <th>show</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let user of UserList; let i=index">
+                <tr>
+                    <td>{{i+1}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.password}}</td>
+                    <td><img src="{{ImagesUrl}}{{user.imageSrc}}" alt="" width="200px"></td>
+                    <td>
+                        <a class="btn btn-primary" routerLink="/User/{{user._id}}" role="button">View</a>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

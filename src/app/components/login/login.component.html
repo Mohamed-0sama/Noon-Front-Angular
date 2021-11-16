@@ -1,0 +1,36 @@
+<div class="container" [hidden]="loginBoolean" >
+    <!-- <form> => not working -->
+      <div class="form-group">
+          <label for="inputEmail">UserName</label>
+          <input type="text" class="form-control" id="inputName" placeholder="Name"   [(ngModel)]= "userName">
+      </div>
+      <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" [(ngModel)]= "passwordLogin" >
+      </div>
+      <div class="form-group">
+        <label for="inputImage">Image</label>
+        <input type="file" class="form-control" id="inputImage" name="image" >
+    </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!(userName && passwordLogin)" (click)="login();">Sign in</button>
+    <!-- </form> -->
+    <!-- Source:www.tutorialrepublic.com -->
+</div>
+<div class="container" [hidden]="!loginBoolean" >
+    <button type="submit" class="btn btn-primary" (click)="logout();">Log out</button>
+</div>
+
+
+
+<form action= "https://noon-ecommerce.herokuapp.com/api/upload/" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="prdName" class="form-label">Product Name:</label>
+        <input type="file" class="form-control" name="image" id="prdName">
+    </div>
+    <!-- <div class="mb-3">
+        <label for="prdImg" class="form-label">Product Image:</label>
+        <input type="file" class="form-control" name="prdImg" id="prdImg" [(ngModel)]="prd.ImgURL" placeholder="" required>
+    </div> -->
+    <button  type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr>
